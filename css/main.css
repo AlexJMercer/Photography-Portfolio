@@ -87,6 +87,11 @@ body::-webkit-scrollbar-thumb {
     color: #EEEEEE;
 }
 
+.footer-about a{
+    color: #00ADB5;
+    text-decoration: none;
+}
+
 .social-icons {
     padding-left: 0;
     margin-bottom: 0;
