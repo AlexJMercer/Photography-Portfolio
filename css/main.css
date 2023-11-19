@@ -1,0 +1,141 @@
+/* 
+Primary Color Scheme:
+
+#222831
+#393E46
+#00ADB5
+#EEEEEE
+
+*/
+
+
+html,
+body {
+    font-family: 'Montserrat', 'sans-serif';
+    color: #222831;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    background-color: #EEEEEE;
+}
+
+/* Scrollbar changes */
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: #222831;
+}
+
+body::-webkit-scrollbar-track {
+    mix-blend-mode: overlay;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #393E46;
+    border-radius: 10px;
+}
+
+/* Navbar properties */
+
+.navbar {
+    font-size: 1.3rem;
+    backdrop-filter: blur(2px);
+    background: linear-gradient(to bottom, rgba(34, 40, 49, 0.3), rgba(34, 40, 49, 0.05));
+}
+
+.navbar .navbar-brand {
+    font-size: 1.3rem;
+    padding: 1.3rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 10rem;
+}
+
+
+/* Main Carousel Properties */
+
+.carousel .carousel-item img {
+    object-fit: fill;
+    background-repeat: no-repeat;
+}
+
+.carousel-size {
+    height: 100vh !important;
+}
+
+/* About Section */
+
+.about-text {
+    color: #222831;
+    font-weight: 400;
+
+    text-shadow: 5px 5px 3px rgba(0, 173, 181, 0.4);
+}
+
+.profile-image {
+    border-radius: 10px;
+    box-shadow: 15px 15px 10px 6px rgba(0, 173, 181, 0.4);
+}
+
+
+
+/* Footer Section */
+
+.footer-section {
+    background: linear-gradient(to bottom, rgb(57, 62, 70) 20%, rgb(34, 40, 49) 100%);
+    color: #EEEEEE;
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.social-icons a {
+    background-color: #393E46;
+    color: #EEEEEE;
+    font-size: 1.6rem;
+    display: inline-block;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin-left: 20px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #EEEEEE;
+    background-color: #29aafe
+}
+
+.social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px
+}
+
+.social-icons a.instagram:hover {
+    background-color: #e83e8c;
+}
+
+.social-icons a.linkedin:hover {
+    background-color: #0077b5;
+}
+
+.social-icons a.github:hover {
+    background-color: #333333;
+}
