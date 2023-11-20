@@ -22,6 +22,14 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/gallery.css">
+
+	<!-- JS File here -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/carousel.js"></script>
+	
+
 	<title>Tathagata's Photography</title>
 </head>
 
@@ -51,15 +59,15 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link text-white" href="#">About</a>
+							<a class="nav-link text-white" href="#aboutsection">About</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link text-white" href="#">Gallery</a>
+							<a class="nav-link text-white" href="#gallery">Gallery</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link text-white" href="#">Contact</a>
+							<a class="nav-link text-white" href="#contact">Contact</a>
 						</li>
 
 					</ul>
@@ -69,51 +77,54 @@
 
 
 		<!-- Carousel Element -->
-		<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+		<div id="carouselInd" class="carousel slide carousel-fade" data-bs-ride="carousel">
 			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+				<button type="button" data-bs-target="#carouselInd" data-bs-slide-to="0" class="active"
 					aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+				<button type="button" data-bs-target="#carouselInd" data-bs-slide-to="1"
 					aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+				<button type="button" data-bs-target="#carouselInd" data-bs-slide-to="2"
 					aria-label="Slide 3"></button>
 			</div>
 			<div class="carousel carousel-inner carousel-size">
 
-				<div class="carousel-item" data-bs-interval="2500">
+				<!-- Desktop Images -->
+				<div class="carousel-item crsl-desktop active" data-bs-interval="2500">
 					<img src="/image-content/desktop-content/_MG_9336.jpg" class="d-block w-100 d-none d-md-block"
-						alt="..." oncontextmenu="return false;">
+							alt="..." oncontextmenu="return false;">
 				</div>
-				<div class="carousel-item" data-bs-interval="2500">
+				
+				<div class="carousel-item crsl-desktop" data-bs-interval="2500">
 					<img src="/image-content/desktop-content/_MG_9617.jpg" class="d-block w-100 d-none d-md-block"
-						alt="..." oncontextmenu="return false;">
+							alt="..." oncontextmenu="return false;">
 				</div>
-				<div class="carousel-item active" data-bs-interval="2500">
+				
+				<div class="carousel-item crsl-desktop" data-bs-interval="2500">
 					<img src="/image-content/desktop-content/_MG_8182.jpg" class="d-block w-100 d-none d-md-block"
-						alt="..." oncontextmenu="return false;">
+							alt="..." oncontextmenu="return false;">
 				</div>
 
 				<!-- Mobile Images -->
-				<!-- <div class="carousel-item" data-bs-interval="2500">
+				<div class="carousel-item crsl-mobile active" data-bs-interval="2500">
 					<img src="/image-content/mobile-content/_MG_9343-2.jpg" class="d-block w-100 d-md-none" alt="..."
 						oncontextmenu="return false;">
 				</div>
-				<div class="carousel-item" data-bs-interval="2500">
+				<div class="carousel-item crsl-mobile" data-bs-interval="2500">
 					<img src="/image-content/mobile-content/Instagram-2-Instagram Portrait-2.jpg"
 						class="d-block w-100 d-md-none" alt="..." oncontextmenu="return false;">
 				</div>
-				<div class="carousel-item" data-bs-interval="2500">
+				<div class="carousel-item crsl-mobile" data-bs-interval="2500">
 					<img src="/image-content/mobile-content/milkyway.jpg" class="d-block w-100 d-md-none" alt="..."
 						oncontextmenu="return false;">
-				</div> -->
+				</div>
 			</div>
 
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselInd"
 				data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselInd"
 				data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
@@ -124,38 +135,84 @@
 	</header>
 
 	<!-- Main -->
+	<a name="aboutsection"></a>
+	<div class="gallery-heading text-center">
+		<h2>About Me</h2>
+	</div>
 	<main>
+		<div class="container">
+			<div class="row row-about">
+				
+				<div class="col-md-6 text-center">
+					<img class="profile-image img-fluid" src="./image-content/profilepic.jpg" loading="lazy" alt="picture of me" oncontextmenu="return false;">
+				</div>
 
-		<div class="row justify-content-evenly mt-lg-5 p-lg-5 mb-lg-5">
-			<div class="row align-items-center col-4">
-				<p class="about-text">
-					Hello.<br><br>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloribus tempora esse fuga,
-					architecto mollitia debitis accusamus facilis eaque unde sit quos illum recusandae quisquam
-					assumenda iste similique, eius magni.
-				</p>
-			</div>
-			<div class="text-center col-4">
-				<img class="profile-image" src="./image-content/profilepic.jpg" width="100%" alt="picture of me">
+				<div class="col-md-6">
+					<p class="about-text">
+						Hello.<br><br>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloribus tempora esse fuga,
+						architecto mollitia debitis accusamus facilis eaque unde sit quos illum recusandae quisquam
+						assumenda iste similique, eius magni.
+					</p>
+				</div>
+				
 			</div>
 		</div>
-
 	</main>
+	
+	<!-- Gallery -->
+	<a name="gallery"></a>
+	<div class="gallery-heading text-center">
+		<h2>Gallery</h2>
+	</div>
+
+	<div class="container-fluid m-0">
+		<div class="row row-gallery row-cols-1 row-cols-md-2">
+			<div class="col">
+				<img src="/image-content/desktop-content/_MG_9617.jpg" alt="mountains" oncontextmenu="return false;">
+			</div>
+			<div class="col">
+				<img src="/image-content/desktop-content/_MG_9336.jpg" alt="sunflowers" oncontextmenu="return false;">
+			</div>
+			<div class="col">
+				<img src="/image-content/desktop-content/_MG_1118.jpg" alt="snow" oncontextmenu="return false;">
+			</div>
+			<div class="col">
+				<img src="/image-content/desktop-content/_MG_1224.jpg" alt="snow" oncontextmenu="return false;">
+			</div>
+			<div class="col">
+				<img src="/image-content/mobile-content/_MG_4426.jpg" alt="spiderlily" oncontextmenu="return false;">
+			</div>
+			<div class="col">
+				<img src="/image-content/mobile-content/Instagram-1.jpg" alt="milkyway" oncontextmenu="return false;">
+			</div>
+		</div>
+	</div>
+	
+	
+	
 
 	<!-- Footer -->
+	<a name="contact"></a>
 	<footer>
-		<div class="footer-section row justify-content-center mt-lg-5 p-lg-5">
-			<div class="p-2 col-7">
+		<div class="footer-section row justify-content-center p-lg-5">
+			<div class="m-2 p-2 col-7">
 				
-				<div class="row align-items-center">
+				<div class="row">
 					<div class="footer-about col-md-8 col-sm-6 col-xs-12">
 						<p class="fs-2 text-lg-start" style="font-weight: 700;">Contact</p>
-						<br>
+						<!-- <br> -->
 						<p>📌 Based in Kolkata, India.</p>
 						<p>📧 E-mail me at <a href="mailto:manualmodeofficial@gmail.com">manualmodeofficial@gmail.com</a></p>
 					</div>
+					
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<p class="fs-2 text-lg-start" style="font-weight: 700;">Sitemap</p>
+						<ul class="footer-sitemap">
+							<li><a href="#">Gallery</a></li>
+							<li><a href="#">Get Prints</a></li>
+							<li><a href="#"></a></li>
+						</ul>
 					</div>
 				</div>
 
