@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {
 .navbar {
     font-size: 1.3rem;
     backdrop-filter: blur(2px);
-    background: linear-gradient(to bottom, rgba(34, 40, 49, 0.4) 25%, rgba(34, 40, 49, 0.1) 75%, rgba(34, 40, 49, 0) 100%);
+    background: linear-gradient(to bottom, rgba(34, 40, 49, 0.5) 0%, rgba(34, 40, 49, 0.3) 40%, rgba(34, 40, 49, 0.15) 60%, rgba(34, 40, 49, 0.05) 80%, rgba(34, 40, 49, 0) 100%);
 }
 
 .navbar .navbar-brand {
@@ -77,14 +77,13 @@ body::-webkit-scrollbar-thumb {
 
 
 
-
 /* About Section */
 
 .row-about {
     display: flex;
     align-items: center;
 
-    margin: 10rem 0;
+    padding: 0 0 6rem 0;
 }
 
 .about-text {
@@ -92,14 +91,48 @@ body::-webkit-scrollbar-thumb {
     font-weight: 400;
     text-shadow: 5px 5px 3px rgba(0, 173, 181, 0.4);
 
-    margin: 5rem 5rem;
+    margin: 5rem 3rem;
 }
 
 .profile-image {
-    width: 80%;
+    width: 70%;
     border-radius: 10px;
     box-shadow: 15px 15px 10px 6px rgba(0, 173, 181, 0.4);
 }
 
+.highlight-word {
+    color: #EEEEEE;
+    background-color: #222831;
+    padding: 0.1rem 0.3rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+}
 
+.highlight-heading {
+    color: #7be9fa;
+    background-color: #222831;
+    padding: 0.1rem 0.5rem;
+    /* font-size: 1.1rem; */
+    border-radius: 4px;
+}
+
+.bold-word {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.row a {
+    color: #00ADB5;
+    text-decoration: none;
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear
+}
+
+.row a:hover {
+    color: #9ff2ff;
+    text-decoration: none;
+    text-shadow: 0 0 5px rgb(190, 246, 255), 0 0 1.5em rgb(148, 241, 255), 0 0 1em rgb(35, 226, 255);
+    backdrop-filter: blur(5px);
+}
 

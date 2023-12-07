@@ -28,7 +28,8 @@
 	<!-- JS File here -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/carousel.js"></script>
-	
+	<!-- <script src="js/main.js"></script> -->
+
 
 	<title>Tathagata's Photography</title>
 </head>
@@ -81,27 +82,25 @@
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselInd" data-bs-slide-to="0" class="active"
 					aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselInd" data-bs-slide-to="1"
-					aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselInd" data-bs-slide-to="2"
-					aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselInd" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselInd" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
 			<div class="carousel carousel-inner carousel-size">
 
 				<!-- Desktop Images -->
 				<div class="carousel-item crsl-desktop active" data-bs-interval="2500">
 					<img src="/image-content/desktop-content/_MG_9336.jpg" class="d-block w-100 d-none d-md-block"
-							alt="..." oncontextmenu="return false;">
+						alt="..." oncontextmenu="return false;">
 				</div>
-				
+
 				<div class="carousel-item crsl-desktop" data-bs-interval="2500">
 					<img src="/image-content/desktop-content/_MG_9617.jpg" class="d-block w-100 d-none d-md-block"
-							alt="..." oncontextmenu="return false;">
+						alt="..." oncontextmenu="return false;">
 				</div>
-				
+
 				<div class="carousel-item crsl-desktop" data-bs-interval="2500">
 					<img src="/image-content/desktop-content/_MG_8182.jpg" class="d-block w-100 d-none d-md-block"
-							alt="..." oncontextmenu="return false;">
+						alt="..." oncontextmenu="return false;">
 				</div>
 
 				<!-- Mobile Images -->
@@ -119,13 +118,11 @@
 				</div>
 			</div>
 
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselInd"
-				data-bs-slide="prev">
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselInd" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselInd"
-				data-bs-slide="next">
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselInd" data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
@@ -137,35 +134,52 @@
 	<!-- Main -->
 	<a name="aboutsection"></a>
 	<div class="gallery-heading text-center">
-		<h2>About Me</h2>
+		<h2>About <span class="highlight-heading">Me</span></h2>
 	</div>
 	<main>
-		<div class="container">
+		<div class="container-fluid m-0">
 			<div class="row row-about">
-				
+
 				<div class="col-md-6 text-center">
-					<img class="profile-image img-fluid" src="./image-content/profilepic.jpg" loading="lazy" alt="picture of me" oncontextmenu="return false;">
+					<img class="profile-image img-fluid" src="./image-content/profilepic.jpg" loading="lazy"
+						alt="picture of me" oncontextmenu="return false;">
 				</div>
 
 				<div class="col-md-6">
 					<p class="about-text">
-						Hello.<br><br>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere doloribus tempora esse fuga,
-						architecto mollitia debitis accusamus facilis eaque unde sit quos illum recusandae quisquam
-						assumenda iste similique, eius magni.
+						<span class="bold-word">Hi,</span>
+						<br><br>
+						I'm <span class="highlight-word">Tathagata</span>, a photographer based in <b>Kolkata</b>.<br><br>
+						I'm not a professional, but photography is a <span class="highlight-word">passion</span> that brings me immense joy. What started 
+						as a hobby has become a journey of exploration and learning, as I delve into various niches 
+						like <span class="highlight-word">Wildlife</span>, <span class="highlight-word">Nature</span>, and <span class="highlight-word">Landscape</span>.
+						<br><br>
+						I'm fascinated by the ability of photography to capture fleeting <span class="highlight-word">moments</span>, evoke emotions, and
+						tell stories. I strive to use my lens to showcase the beauty of the world around me, from the
+						grand landscapes to the intricate details in nature. Through my photos, I hope to share my
+						<span class="highlight-word">perspective</span> and inspire others to see the world through a <span class="highlight-word">creative</span> lens.
+						<br><br>
+						I'm constantly <span class="highlight-word">learning</span> and <span class="highlight-word">evolving</span> as a photographer, and I'm excited to see where this
+						journey takes me. I'm open to new challenges and collaborations, so feel free to contact me if
+						you have any inquiries or projects in mind.
+						<br><br>
+						You can also follow my work on social media at 
+						<span class="highlight-heading"><a href="https://www.instagram.com/ttgt.photo" class="bi-instagram" title="Go Follow Me on Instagram!" target="_blank"><b> ttgt.photo</b></a></span>.
+						<br><br>
+						<span class="highlight-word">Thank you</span> for visiting my portfolio!
 					</p>
 				</div>
-				
+
 			</div>
 		</div>
 	</main>
-	
+
 	<!-- Gallery -->
 	<a name="gallery"></a>
 	<div class="gallery-heading text-center">
 		<h2>Gallery</h2>
 	</div>
-
+	
 	<div class="container-fluid m-0">
 		<div class="row row-gallery row-cols-1 row-cols-md-2">
 			<div class="col">
@@ -180,55 +194,70 @@
 			<div class="col">
 				<img src="/image-content/desktop-content/_MG_1224.jpg" alt="snow" oncontextmenu="return false;">
 			</div>
+		</div>
+
+		<div class="row row-gallery row-cols-2 row-cols-md-4">
 			<div class="col">
 				<img src="/image-content/mobile-content/_MG_4426.jpg" alt="spiderlily" oncontextmenu="return false;">
 			</div>
 			<div class="col">
+				<img src="/image-content/mobile-content/Instagram-1-Instagram Portrait-4.jpg" alt="victoria_memorial"
+					oncontextmenu="return false;">
+			</div>
+			<div class="col">
 				<img src="/image-content/mobile-content/Instagram-1.jpg" alt="milkyway" oncontextmenu="return false;">
+			</div>
+			<div class="col">
+				<img src="/image-content/mobile-content/_MG_8254.jpg" alt="crane" oncontextmenu="return false;">
 			</div>
 		</div>
 	</div>
-	
-	
-	
+
+
+
+
 
 	<!-- Footer -->
 	<a name="contact"></a>
 	<footer>
 		<div class="footer-section row justify-content-center p-lg-5">
 			<div class="m-2 p-2 col-7">
-				
+
 				<div class="row">
 					<div class="footer-about col-md-8 col-sm-6 col-xs-12">
 						<p class="fs-2 text-lg-start" style="font-weight: 700;">Contact</p>
 						<!-- <br> -->
 						<p>📌 Based in Kolkata, India.</p>
-						<p>📧 E-mail me at <a href="mailto:manualmodeofficial@gmail.com">manualmodeofficial@gmail.com</a></p>
+						<p>📧 E-mail Me @ <a
+								href="mailto:manualmodeofficial@gmail.com">manualmodeofficial</a></p>
 					</div>
-					
+
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<p class="fs-2 text-lg-start" style="font-weight: 700;">Sitemap</p>
 						<ul class="footer-sitemap">
-							<li><a href="#">Gallery</a></li>
-							<li><a href="#">Get Prints</a></li>
+							<li><a href="#gallery">Gallery</a></li>
+							<li><a href="/comingsoon.html">Get Prints</a></li>
 							<li><a href="#"></a></li>
 						</ul>
 					</div>
 				</div>
 
 				<hr>
-				
+
 				<div class="row align-items-center">
 					<div class="col-md-8 col-sm-6 col-xs-12">
 						<p class="text-lg-start">Made with 💖 by Tathagata Guha Ray</p>
 					</div>
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<p class="text-lg-end">
-							<ul class="social-icons d-flex justify-content-lg-end justify-content-start">
-								<li><a href="https://www.instagram.com/ttgt.photo" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a></li>
-								<li><a href="https://www.linkedin.com/in/tathagata-guha-ray/" class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
-								<li><a href="https://github.com/AlexJMercer" class="github" title="GitHub"><i class="bi bi-github"></i></a></li>
-							</ul>
+						<ul class="social-icons d-flex justify-content-lg-end justify-content-start">
+							<li><a href="https://www.instagram.com/ttgt.photo" target="_blank" class="instagram"
+									title="Instagram"><i class="bi bi-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/tathagata-guha-ray/" target="_blank"
+									class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+							<li><a href="https://github.com/AlexJMercer" target="_blank" class="github"
+									title="GitHub"><i class="bi bi-github"></i></a></li>
+						</ul>
 						</p>
 					</div>
 				</div>
