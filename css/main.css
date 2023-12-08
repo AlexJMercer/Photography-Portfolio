@@ -57,6 +57,23 @@ body::-webkit-scrollbar-thumb {
 
 
 
+/* Custom Toggler for Phone Menu */
+
+.custom-toggler {
+    /* background-color: #393e4640; */
+    border-color: #00acb500;
+    color: #EEE;
+    border-radius: 7px;
+    padding: 6px 12px;
+}
+
+.custom-toggler:focus,
+.custom-toggler:hover {
+    color: #bef6ff;
+}
+
+
+
 /* Main Carousel Properties */
 
 .carousel .carousel-item img {
