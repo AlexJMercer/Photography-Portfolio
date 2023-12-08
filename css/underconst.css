@@ -11,7 +11,6 @@ body {
 }
 
 .backimg {
-    background-image: url("../image-content/under-construct/lighthouse.webp");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -20,12 +19,12 @@ body {
 
 .meam {
     position: absolute;
-    width: 30vh;
+    width: 25vh;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -51,7 +50,7 @@ body {
     border: 2px solid #ffffff;
 
     position: absolute;
-    top: 45%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
