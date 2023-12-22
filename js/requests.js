@@ -5,27 +5,18 @@
 function sendRequest(element) {
     const cardTitle = element.parentElement.querySelector('.card-title').innerText;
 
-    const encodedTitle = cardTitle;
+    const formData = new FormData();
+    formData.append('req', cardTitle);
 
-    const url = 'gallery-display.php';
-    const data = { request: encodedTitle };
-
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => {
-        if (response.ok) {
-            console.log('Request sent successfully');
-            window.location.href = url; // Redirect to the specified page
-        } else {
-            console.log('Failed to send request');
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            console.log('POST request sent successfully');
+            window.location.href = 'gallery-display.php';
         }
-    })
-    .catch(error => {
-        console.log('Error:', error);
-    });
+    };
+
+    // Send a POST request
+    xhttp.open('POST', 'gallery-display.php', true);
+    xhttp.send(formData);
 }
