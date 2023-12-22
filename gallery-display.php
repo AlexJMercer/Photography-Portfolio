@@ -8,9 +8,9 @@
 <body>
     <h1>Gallery</h1>
     <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['req'])) {
-            $folderName = $_POST['req'];
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        if (isset($_GET['req'])) {
+            $folderName = $_GET['req'];
             $folderPath = './gallery-content/' . $folderName; // Set your folder path here
 
             if (is_dir($folderPath)) {
