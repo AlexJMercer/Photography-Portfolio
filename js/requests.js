@@ -7,7 +7,7 @@ function sendRequest(element) {
 
     const encodedTitle = cardTitle;
 
-    const url = 'gallery-display.html';
+    const url = 'gallery-display.php';
     const data = { request: encodedTitle };
 
     fetch(url, {
