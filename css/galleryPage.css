@@ -18,10 +18,33 @@ body {
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 700;
     color: #EEEEEE;
     text-align: center;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #EEEEEE;
+    text-align: center;
+}
+
+.header-container .hero-container .header-text h2 {
+    /* font-size: 1.5rem;
+    font-weight: 500;
+    color: #EEEEEE; */
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-container .hero-container .header-text {

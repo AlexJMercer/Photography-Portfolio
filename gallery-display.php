@@ -1,3 +1,5 @@
+<?php header('Pragma: no-cache'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +17,7 @@
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script> -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,8 +28,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- JS File here -->
-    <!-- <script src="js/carousel.js"></script>
-    <script src="js/main.js"></script> -->
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        function reloadImg(img) {
+            img.onerror = null;
+            img.src = img.src;
+        }
+    </script>
 
 
     <!-- PHP Code for Dynamic Title -->
@@ -93,10 +102,47 @@
     </header>
 
 
+    <div class="header-container">
+        <div class="header">
+            <div class="hero-container">
+                <img class="hero-img" src="./gallery-content/_MG_0394.jpg" alt="panorama" oncontextmenu="return false;">
+                <div class="header-text">
+                    <h1><?php echo $title; ?></h1>
+                    <!-- <p class="text-center"></p> -->
+                </div>
+                <div class="svg-container">
+                    <a href="#images">
+                        <svg fill="#eeeeee" height="60px" width="60px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="-33 -33 396.00 396.00" xml:space="preserve" transform="rotate(180)"
+                            stroke="#ffffff" stroke-width="0.0033">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                stroke="#CCCCCC" stroke-width="0.66"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g id="XMLID_109_">
+                                    <path id="XMLID_110_"
+                                        d="M25.607,190.607L164.997,51.214l139.396,139.393C307.323,193.536,311.161,195,315,195 c3.839,0,7.678-1.464,10.606-4.394c5.858-5.858,5.858-15.355,0-21.213l-150.003-150C172.79,16.58,168.976,15,164.997,15 s-7.794,1.581-10.607,4.394l-149.997,150c-5.858,5.858-5.858,15.355,0,21.213C10.251,196.465,19.749,196.465,25.607,190.607z">
+                                    </path>
+                                    <path id="XMLID_138_"
+                                        d="M175.603,139.393c-2.813-2.813-6.628-4.393-10.606-4.393c-3.979,0-7.794,1.581-10.607,4.394l-149.996,150 c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213-0.001l139.39-139.393l139.397,139.394 C307.323,313.536,311.161,315,315,315c3.839,0,7.678-1.464,10.606-4.394c5.858-5.858,5.858-15.355,0-21.213L175.603,139.393z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Spacer -->
+    <div class="spacer"></div>
     <div class="spacer"></div>
 
     <!-- Gallery Display -->
+    <a name="images"></a>
     <div class="container-fluid m-0">
         <div class="row row-gallery justify-content-center">
             <?php
@@ -119,14 +165,14 @@
                                     $imageClass = ($width > $height) ? 'l' : 'p';
 
                                     if ($imageClass === 'p') {
-                                        echo '<div class="col-md-3 mb-3">';
-                                        echo '<img class="img-fluid" src="' . $folderPath . '/' . $file . '" loading="lazy" decoding="async">';
+                                        echo '<div class="col-md-3 mb-2 mt-2">';
+                                        echo '<img class="img-fluid rounded" src="' . $folderPath . '/' . $file . '" loading="lazy" decoding="async" onerror="reloadImg(this)" oncontextmenu="return false;">';
                                         echo '</div>';
                                         $portraitCount++;
                                     } 
                                     else if ($imageClass === 'l') {
-                                        echo '<div class="col-md-5 mb-3">';
-                                        echo '<img class="img-fluid" src="' . $folderPath . '/' . $file . '" loading="lazy" decoding="async">';
+                                        echo '<div class="col-md-6 mb-2 mt-2">';
+                                        echo '<img class="img-fluid rounded" src="' . $folderPath . '/' . $file . '" loading="lazy" decoding="async" onerror="reloadImg(this)" oncontextmenu="return false;">';
                                         echo '</div>';
                                         $landscapeCount++;
                                     }
