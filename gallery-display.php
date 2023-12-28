@@ -107,7 +107,7 @@
             <div class="hero-container">
                 <img class="hero-img" src="./gallery-content/_MG_0394.jpg" alt="panorama" oncontextmenu="return false;">
                 <div class="header-text">
-                    <h1><?php echo $title; ?></h1>
+                    <h2 class="gallerypagetitle"><?php echo $title; ?></h2>
                     <!-- <p class="text-center"></p> -->
                 </div>
                 <div class="svg-container">
@@ -138,7 +138,6 @@
 
 
     <!-- Spacer -->
-    <div class="spacer"></div>
     <div class="spacer"></div>
 
     <!-- Gallery Display -->
