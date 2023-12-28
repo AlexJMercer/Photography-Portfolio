@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,8 +26,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- JS File here -->
-    <script src="js/carousel.js"></script>
-	<script src="js/main.js"></script>
+    <!-- <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script> -->
 
 
     <!-- PHP Code for Dynamic Title -->
@@ -38,9 +39,12 @@
         $title = $folderName . ' Gallery';
     }
     ?>
-    
-    <title><?php echo $title; ?></title>
+
+    <title>
+        <?php echo $title; ?>
+    </title>
 </head>
+
 <body>
 
     <header>
@@ -89,37 +93,62 @@
     </header>
 
 
-    <?php
-    // Rest of your PHP code to display images based on the selected folder
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['folderName'])) {
+    <!-- Spacer -->
+    <div class="spacer"></div>
+
+    <!-- Gallery Display -->
+    <div class="container-fluid m-0">
+        <div class="row row-gallery justify-content-center">
+            <?php
             
-            $folderName = $_POST['folderName'];
-            $folderPath = './gallery-content/' . $folderName;    
-    
-            if (is_dir($folderPath)) {
-                $files = scandir($folderPath);
-                foreach ($files as $file) {
-                    if ($file !== '.' && $file !== '..') {
-                        if (pathinfo($file, PATHINFO_EXTENSION) === 'jpg' || pathinfo($file, PATHINFO_EXTENSION) === 'png') {
-                            echo '<img src="' . $folderPath . '/' . $file . '" alt="' . $file . '" >';
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                if (isset($_POST['folderName'])) {
+                    $folderName = $_POST['folderName'];
+                    $folderPath = './gallery-content/' . $folderName;
+
+                    if (is_dir($folderPath)) {
+                        $files = scandir($folderPath);
+
+                        $portraitCount = 0;
+                        $landscapeCount = 0;
+
+                        foreach ($files as $file) {
+                            if ($file !== '.' && $file !== '..') {
+                                if (pathinfo($file, PATHINFO_EXTENSION) === 'jpg' || pathinfo($file, PATHINFO_EXTENSION) === 'png') {
+                                    list($width, $height) = getimagesize($folderPath . '/' . $file);
+                                    $imageClass = ($width > $height) ? 'l' : 'p';
+
+                                    if ($imageClass === 'p') {
+                                        echo '<div class="col-md-3 mb-3">';
+                                        echo '<img class="img-fluid" src="' . $folderPath . '/' . $file . '" loading="lazy" decoding="async">';
+                                        echo '</div>';
+                                        $portraitCount++;
+                                    } 
+                                    else if ($imageClass === 'l') {
+                                        echo '<div class="col-md-5 mb-3">';
+                                        echo '<img class="img-fluid" src="' . $folderPath . '/' . $file . '" loading="lazy" decoding="async">';
+                                        echo '</div>';
+                                        $landscapeCount++;
+                                    }
+                                }
+                            }
                         }
+                        // echo $portraitCount . ' ' . $landscapeCount;
+                    } else {
+                        echo '<h3><center>Folder not found</center></h3>';
                     }
+                } else {
+                    echo '<h3><center>Request Not Found</center></h3>';
                 }
             } else {
-                echo '<h3>
-                    <center>Folder not found</center>
-                </h3>';
+                echo '<h3><center>Invalid request</center></h3>';
             }
-        } else {
-            echo '<h3>
-                <center>Request Not Found</center>
-            </h3>';
-        }
-    } else {
-        echo '<h3><center>Invalid request</center></h3>';
-    }
-    ?>
+            ?>
+        </div>
+    </div>
+
+    <!-- Spacer -->
+    <div class="spacer"></div>
 
 
     <!-- Footer -->
@@ -139,9 +168,9 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <p class="fs-2 text-lg-start" style="font-weight: 700;">Sitemap</p>
                         <ul class="footer-sitemap">
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="comingsoon.html">Get Prints</a></li>
-                            <li><a href="#"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -172,7 +201,8 @@
     <!-- PopperJS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-    </script>
+        </script>
 
 </body>
+
 </html>

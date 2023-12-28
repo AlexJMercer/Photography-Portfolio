@@ -14,7 +14,9 @@ html, body {
     background-color: #EEEEEE;
 }
 
-
+img {
+    content-visibility: auto;
+}
 
 
 /* Scrollbar changes */
