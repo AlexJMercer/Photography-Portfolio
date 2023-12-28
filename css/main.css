@@ -14,7 +14,9 @@ html, body {
     background-color: #EEEEEE;
 }
 
-
+img {
+    content-visibility: auto;
+}
 
 
 /* Scrollbar changes */
@@ -54,6 +56,21 @@ body::-webkit-scrollbar-thumb {
     padding-right: 10rem;
 }
 
+.navbar ul li a {
+    color: #EEEEEE;
+    text-decoration: none;
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+    padding: 10px 0 10px 24px;
+}
+
+.navbar ul li a:hover {
+    color: #EEEEEE;
+    text-decoration: none;
+    text-shadow: 0 0 5px #FFF, 0 0 1.5em #FFF, 0 0 1em #FFF;
+}
+
 
 
 
@@ -64,12 +81,12 @@ body::-webkit-scrollbar-thumb {
     border-color: #00acb500;
     color: #EEE;
     border-radius: 7px;
-    padding: 6px 12px;
+    padding: 12px 24px;
 }
 
 .custom-toggler:focus,
 .custom-toggler:hover {
-    color: #bef6ff;
+    color: transparent;
 }
 
 
