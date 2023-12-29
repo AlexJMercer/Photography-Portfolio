@@ -17,7 +17,6 @@
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script> -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +29,7 @@
     <!-- JS File here -->
     <script src="js/carousel.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/navbarToggler.js"></script>
 
     <script>
         function reloadImg(img) {
@@ -88,11 +88,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="index.html#gallery">Gallery</a>
+                            <a class="nav-link text-white" href="gallery.html">Gallery</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="index.html#contact">Contact</a>
+                            <a class="nav-link text-white" href="#contact">Contact</a>
                         </li>
 
                     </ul>
