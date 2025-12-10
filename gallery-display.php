@@ -49,6 +49,7 @@
     }
     ?>
 
+	<link rel="icon" href="image-content/lens.ico" type="image/x-icon">
     <title>
         <?php echo $title; ?>
     </title>
