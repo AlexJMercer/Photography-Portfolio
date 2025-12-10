@@ -1,5 +1,56 @@
 /* CSS for Gallery */
 
+
+
+/* See More Section Background */
+.see-more {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    margin: 0;
+    overflow: hidden;
+    padding: 1.5rem 0;
+}
+
+.see-more::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: url('../gallery-content/_MG_0394.jpg') center/cover no-repeat;
+    filter: brightness(0.95);
+    transition: filter 0.3s;
+}
+
+.see-more:has(a.btn:hover)::before,
+.see-more:has(a.btn:focus)::before {
+    filter: brightness(0.5);
+}
+
+.see-more a.btn {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: large;
+    font-weight: 800;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    padding: 0.75em 2em;
+    background: rgba(0,0,0,0.3);
+    transition: color 0.3s, border-color 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,1);
+}
+
+.see-more a.btn:hover, .see-more a.btn:focus {
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 16px 4px #fff, 0 4px 10px rgba(0,0,0,0.08);
+    text-shadow: 0 0 8px #fff, 0 0 16px #fff;
+}
+
+
 .gallery-heading h2{
     color: #222831;
     font-size: 3rem;
